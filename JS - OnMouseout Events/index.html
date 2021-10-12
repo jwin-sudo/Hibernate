@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    
+   
+</head>
+<body>
+	
+    <center><h1>Pink Frg Event Organizer</h1></center>
+    <center>
+    <table  border="1" id="table">
+	<tr>
+    <th>Name</th>
+    <th>Venue</th>
+    <th>Date</th>
+    <th>Cost</th>
+  </tr>
+  <tr id="row1" onmouseover="hoverRow1()" onmouseout="removeHover1()">
+    <td  >Wedding Planning</td>
+    <td>Sri Plus Thirumana Mahal</td>
+    <td>4.5.2018</td>
+    <td>500000</td>
+  </tr>
+  <tr id="row2" onmouseover="hoverRow2()" onmouseout="removeHover2()">
+	 <td >Corporate Events</td>
+    <td>RVS Hall, 2nd Floor</td>
+    <td>6.9.2018</td>
+    <td>50000</td>
+  </tr>
+  <tr id="row3" onmouseover="hoverRow3()" onmouseout="removeHover3()">
+    <td>Award Ceremonies</td>
+    <td>Vivekanandha Auditorium</td>
+    <td>6.1.2018</td>
+    <td>300000</td>
+  </tr>
+  <tr id="row4" onmouseover="hoverRow4()" onmouseout="removeHover4()">
+	<td>Gala Dinners</td>
+    <td>Paga Towers</td>
+    <td>11.3.2018</td>
+    <td>75000</td>
+  </tr>
+  
+</table >
+	
+  
+   
+</center>
+   
+<script>
+       var row1 = document.getElementById("row1");
+       var row2 = document.getElementById("row2");
+       var row3 = document.getElementById("row3");
+       var row4 = document.getElementById("row4");
+	
+	   //Fill code here
+       function hoverRow1(){
+           row1.style = "background-color: #c8daf7";
+           console.log("in hover");
+       }
+       
+       function removeHover1(){
+            row1.style = "background-color:#ffffff";
+           console.log("remove hover");
+
+       }
+       
+       function hoverRow2(){
+           row2.style= "background-color: #9df9ec";
+       }
+       
+       function removeHover2(){
+           row2.style = "background-color: #ffffff";
+       }
+       
+       function hoverRow3(){
+           row3.style = "background-color: #b2a0e8";
+       }
+       
+       function removeHover3(){
+           row3.style = "background-color: #ffffff";
+       }
+       
+       function hoverRow4(){
+           row4.style ="background-color: #d8a0e8";
+       }
+       
+       function removeHover4(){
+           row4.style ="background-color: #ffffff"
+       }
+
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // fill your code here
+        function Withdraw() {
+            var number = Number(document.getElementById('number').value);
+            var amount = Number(document.getElementById('amount').innerHTML);
+            var result = parseInt(amount) - parseInt(number);
+            if (result < 500) {
+                document.getElementById('amount').innerHTML = 'Amount less than 500';
+            } else {
+            	document.getElementById('amount').innerHTML = result;
+            }
+        }
+        function Deposit() {
+        	var n = Number(document.getElementById('number').value);
+            var a = Number(document.getElementById('amount').innerHTML);
+            document.getElementById('amount').innerHTML = parseInt(a) + parseInt(n);
+        }
+    </script>
+</head>
+<body>
+  <!-- fill your code here -->
+    <h1>Bank</h1>
+    <h2>Amount withdraw and deposit</h2>
+    <form action='' onsubmit=''>
+        <label for='number'>Enter your amount:</label>
+        <input type='text' id='number'><br>
+        <button type='button' id='button1' onClick='Withdraw()'>Withdraw</button>
+        <button type='button' id='button2' onClick='Deposit()'>Deposit</button>
+    </form>
+    <p id='amount'>1000</p>
+</body>
+</html>

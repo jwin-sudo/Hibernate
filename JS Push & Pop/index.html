@@ -1,0 +1,42 @@
+<html>
+    <!-- fill your code here-->
+    <head>
+        <script>
+            var arr = new Array();
+            function pushElements(){
+                arr.push(document.getElementById("input").value);
+                document.getElementById("input").value = "";
+                document.getElementById("events").innerHTML = "<h2>Added Successfully</h2>";
+            }
+            function popElements(){
+                arr.pop();
+                document.getElementById("events").innerHTML = "<h2>Removed Successfully</h2>";
+            }
+            function display(){
+                if(arr.length==0){
+                    document.getElementById("events").innerHTML = "<h2>Event array is empty</h2>";
+                }
+                else{
+                    var item;
+                    document.getElementById("events").innerHTML = "<h2>The Events in the array</h2>";
+                    for (var I = 0; I < arr.length; I++)
+                    {
+                        item = "<li>" + arr[I] + "</li>";
+                        document.getElementById("events").innerHTML += item;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Events List</h1>
+            <label for="input">Enter the Events:</label>
+            <input id="input"><br>
+            <button id="push" onclick="pushElements()">Push</button>
+            <button id="pop" onclick="popElements()">Pop</button>
+            <button id="display" onclick="display()">Display</button>
+            <div id="events"></div>
+        </center>
+    </body>
+</html>

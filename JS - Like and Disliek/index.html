@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+    
+    
+</head>
+    <body>
+    
+    <!--Enter your text here!-->
+        <h2>EVENTS & PROMOTIONS</h2>
+        <img src="Event_Picture.jgp">
+        <i><button class="fa fa-thumbs-up" id="button1" onClick="like()"></button></i>
+        <i><button class="fa fa-thumbs-down" id="button2" onClick="unlike()"></button></i>
+        Likes: <q id="likes">0</q>
+    <script>
+        var likes = 0;
+        function like(){
+            likes++;
+            //console.log(likes);
+            document.getElementById("likes").innerHTML = likes;
+        }
+        
+        function unlike(){
+            if(likes > 0){
+                likes--;
+                //console.log(likes);
+                document.getElementById("likes").innerHTML = likes;
+            }
+        }
+    
+    
+    </script>
+    </body>
+    
+</html>
+

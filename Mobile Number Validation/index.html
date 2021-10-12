@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script>
+        function register() {
+            var mobile = document.getElementById("mobile").value;
+            var result = document.getElementById("result");
+            if (mobile.length < 1) {
+                result.innerHTML = "Mobile number field should not be empty"
+                result.style.color = "#FF0000"
+            }
+            else if (mobile.length < 10) {
+                result.innerHTML = "Mobile number should be of length 10"
+                result.style.color = "#FF0000"
+            }
+            else {
+                result.innerHTML = "Registration Successful"
+                result.style.color = "#33880A"
+            }
+        }
+        </script>
+	</head>
+    <body>
+        <h2>Registration Form</h2>
+        <lable>Username</lable>
+        <input id="name">
+        <label>Password</label>
+        <input id="password">
+        <lable>Mobile Number</lable>
+        <input id="mobile">
+        <button id="register" onClick="register()">Register</button>
+        <div id="result"></div>
+    </body>
+</html>

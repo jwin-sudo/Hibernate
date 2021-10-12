@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <style>
+    
+        #success{
+            color: green;
+        }
+        #fail{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+	<h1>Registration Page</h1>
+    Username <input id="name">
+    Password <input id="password" type=password>
+    Re-Type Password <input id="repassword" type=password>
+    <button type= button id="register" onClick="registration()">Register</button>
+	<div id="fail"></div>
+    
+    <div id="success"></div>
+    
+    <script>
+        function hasChars(word){
+            var char = new RegExp("([a-z])");
+            var digits = new RegExp("([0-9])");
+            var spec = new RegExp("([!@#$%^&*])");
+            var upperCase = new RegExp("([A-Z])");
+
+            
+                             
+            console.log(word);
+            if(char.test(word) &&
+            digits.test(word) &&
+            spec.test(word)){
+                return true;
+            }
+            else{
+                return false;
+            }
+            
+        }
+        var fail = document.getElementById("fail");
+        var success = document.getElementById("success");
+        
+        function registration(){
+            var password = document.getElementById("password").value;
+            var repassword = document.getElementById("repassword").value;
+            if(password.length > 7 && hasChars(password)){
+                
+                if(password == repassword){
+                    fail.innerHTML = ""
+                    success.innerHTML = "Login Successful"
+                }
+                
+                else{
+                     fail.innerHTML = "Password and Re-Type Password doesn't match"
+                }
+             
+            }
+            
+           else{
+                  fail.innerHTML = "Passwords must contain at least eight characters,including uppercase,lowercase letters,numbers and special characters."
+           }
+            
+        }
+    
+    
+    </script>
+</body>
+</html>
+
